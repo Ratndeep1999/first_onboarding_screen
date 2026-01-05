@@ -76,11 +76,11 @@ flutter:
   fonts:
     - family: 'Maecellus'
       fonts:
-        - asset: assets/fonts/Maecellus-Regular.ttf
+        - asset: assets\fonts\Marcellus-Regular.ttf
           weight: 400
     - family: 'Gilroy'
       fonts:
-        - asset: assets/fonts/Gilroy-Medium.ttf
+        - asset: assets\fonts\Gilroy-Medium.ttf
           weight: 400
   #
   #   - family: Trajan Pro
