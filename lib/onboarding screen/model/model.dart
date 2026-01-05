@@ -10,10 +10,20 @@ class OnBoardingScreenModel {
   });
 
   /// List return objects of OnboardingScreenModel data
-  List<OnBoardingScreenModel> screenData = [
+  static List<OnBoardingScreenModel> screenData = [
     OnBoardingScreenModel(
-      title: "Hello",
-      description: 'description',
+      title: "Explore",
+      description: 'Explore your favourite destination around the world.',
+      image: 'image',
+    ),
+    OnBoardingScreenModel(
+      title: "Easy Peasy",
+      description: 'Make your travel experience very easy & peasy.',
+      image: 'image',
+    ),
+    OnBoardingScreenModel(
+      title: "Enjoy Tour",
+      description: 'Enjoy your favourite destination with your love one.',
       image: 'image',
     ),
   ];
