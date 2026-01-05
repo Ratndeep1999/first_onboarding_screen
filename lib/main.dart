@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      title: 'First Onboarding Screen Design',
+      title: 'First onboarding screen Design',
       home: OnboardingScreen(),
     );
   }
