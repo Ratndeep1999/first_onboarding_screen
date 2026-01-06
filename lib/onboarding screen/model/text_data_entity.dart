@@ -2,10 +2,10 @@ class TextDataEntity {
   final String title;
   final String description;
 
-  TextDataEntity({required this.title, required this.description});
+  const TextDataEntity({required this.title, required this.description});
 
   /// List return objects of OnboardingScreenModel data
-  static List<TextDataEntity> screenData = [
+  static const List<TextDataEntity> screenData = [
     TextDataEntity(
       title: "Explore",
       description: 'Explore your favourite destination around the world.',
