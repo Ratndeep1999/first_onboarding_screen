@@ -3,7 +3,9 @@ import 'dot_indicator_widget.dart';
 import 'icon_button_widget.dart';
 
 class BottomSectionWidget extends StatelessWidget {
-  const BottomSectionWidget({super.key});
+  const BottomSectionWidget({super.key, required this.isActive});
+
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class BottomSectionWidget extends StatelessWidget {
           ),
 
           /// Dot Indicator
-          DotIndicatorWidget(),
+          DotIndicatorWidget(isActive: isActive),
 
           /// Next Button
           IconButtonWidget(onTap: () {}, semanticLabel: 'Next Page'),
