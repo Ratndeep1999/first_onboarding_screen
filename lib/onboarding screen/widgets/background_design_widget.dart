@@ -11,12 +11,11 @@ class BackgroundDesignWidget extends StatelessWidget {
         color: Colors.orange.shade100,
         strokeWidth: 2.5,
         borderType: BorderType.Circle,
-        dashPattern: [2.5, 8],
-        // dot length, space length
+        dashPattern: [2.5, 5], // dot length, space length
         child: Container(
           height: 250,
           width: 250,
-          margin: EdgeInsets.all(18.0),
+          margin: EdgeInsets.all(12.0),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             gradient: LinearGradient(
