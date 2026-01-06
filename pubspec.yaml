@@ -36,8 +36,6 @@ dependencies:
   cupertino_icons: ^1.0.8
   # Enable deiitd border
   dotted_border: ^2.1.0
-  # Enable Svg images
-  flutter_svg: ^2.2.3
 
 dev_dependencies:
   flutter_test:
