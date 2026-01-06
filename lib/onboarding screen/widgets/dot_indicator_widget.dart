@@ -11,7 +11,7 @@ class DotIndicatorWidget extends StatelessWidget {
       duration: Duration(milliseconds: 500),
       height: 8,
       width: 8,
-      margin: EdgeInsets.symmetric(horizontal: 0),
+      margin: EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
         color: isActive ? Colors.orange : Colors.black12,
         shape: BoxShape.circle,
