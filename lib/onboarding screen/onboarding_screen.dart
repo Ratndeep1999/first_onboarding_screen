@@ -28,7 +28,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.dispose();
   }
 
-  /// Onboarding data from Model
+  /// Onboarding text data from TextDataModel
   final List<TextDataEntity> _onboardingScreenData = TextDataEntity.screenData;
 
   @override
