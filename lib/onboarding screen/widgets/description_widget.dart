@@ -16,7 +16,7 @@ class DescriptionWidget extends StatelessWidget {
           textAlign: TextAlign.start,
           style: TextStyle(
             fontFamily: 'Gilroy',
-            color: Colors.black54,
+            color: Colors.black26,
             fontSize: 16,
             fontWeight: FontWeight.w400,
           ),
