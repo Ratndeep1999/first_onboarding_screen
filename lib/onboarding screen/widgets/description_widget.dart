@@ -8,7 +8,7 @@ class DescriptionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 300,
+      width: 280,
       child: Text(
         description,
         textAlign: TextAlign.start,
