@@ -1,6 +1,6 @@
 import 'package:first_onboarding_screen/onboarding%20screen/widgets/screen_design_widget.dart';
 import 'package:flutter/material.dart';
-import 'model/model.dart';
+import 'model/text_data_entity.dart';
 import 'widgets/bottom_section_widget.dart';
 import 'widgets/description_widget.dart';
 import 'widgets/title_widget.dart';
@@ -29,8 +29,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   /// Onboarding data from Model
-  final List<OnBoardingScreenModel> _onboardingScreenData =
-      OnBoardingScreenModel.screenData;
+  final List<TextDataEntity> _onboardingScreenData = TextDataEntity.screenData;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               controller: _pageController,
               itemCount: _onboardingScreenData.length,
               onPageChanged: (index) {
-                _pageIndex = index;
+                setState(() {
+                  _pageIndex = index;
+                });
               },
               pageSnapping: true,
               itemBuilder: (ctx, index) {
@@ -55,13 +56,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                     /// Title
                     TitleWidget(title: _onboardingScreenData[index].title),
-                    SizedBox(height: 16),
+                    SizedBox(height: 10),
 
                     /// Description
                     DescriptionWidget(
                       description: _onboardingScreenData[index].description,
                     ),
-                    SizedBox(height: 20),
+                    //SizedBox(height: 20),
                   ],
                 );
               },
@@ -69,7 +70,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
 
           /// Bottom Section
-          BottomSectionWidget(),
+          BottomSectionWidget(
+            length: _onboardingScreenData.length,
+            pageIndex: _pageIndex,
+          ),
         ],
       ),
     );
