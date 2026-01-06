@@ -7,16 +7,19 @@ class DescriptionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 280,
-      child: Text(
-        description,
-        textAlign: TextAlign.start,
-        style: TextStyle(
-          fontFamily: 'Gilroy',
-          color: Colors.black54,
-          fontSize: 16,
-          fontWeight: FontWeight.w400,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: SizedBox(
+        width: 280,
+        child: Text(
+          description,
+          textAlign: TextAlign.start,
+          style: TextStyle(
+            fontFamily: 'Gilroy',
+            color: Colors.black54,
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+          ),
         ),
       ),
     );
