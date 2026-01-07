@@ -1,3 +1,5 @@
+import 'package:first_onboarding_screen/utils/constants/texts.dart';
+
 class TextDataEntity {
   final String title;
   final String description;
@@ -7,16 +9,16 @@ class TextDataEntity {
   /// List return objects of OnboardingScreenModel data
   static const List<TextDataEntity> screenData = [
     TextDataEntity(
-      title: "Explore",
-      description: 'Explore your favourite destination around the world.',
+      title: OnBoardingText.onBoardingScreen1Title,
+      description: OnBoardingText.onBoardingScreen1Description,
     ),
     TextDataEntity(
-      title: "Easy Peasy",
-      description: 'Make your travel experience very easy & peasy.',
+      title: OnBoardingText.onBoardingScreen2Title,
+      description: OnBoardingText.onBoardingScreen2Description,
     ),
     TextDataEntity(
-      title: "Enjoy Tour",
-      description: 'Enjoy your favourite destination with your love one.',
+      title: OnBoardingText.onBoardingScreen3Title,
+      description: OnBoardingText.onBoardingScreen3Description,
     ),
   ];
 }
