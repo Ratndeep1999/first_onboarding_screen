@@ -22,3 +22,4 @@ samples, guidance on mobile development, and a full API reference.
 # Results
 ![Screen 1](assets/result/onboarding_screen1.png)
 ![Screen 2](assets/result/onboarding_screen2.png)
+![Screen 3](assets/result/onboarding_screen3.png)
