@@ -1,9 +1,6 @@
+import 'package:first_onboarding_screen/onboarding/model/onboarding_screens_model.dart';
 import 'package:flutter/material.dart';
-import '../model/text_data_entity.dart';
 import '../widgets/bottom_section_widget.dart';
-import 'onboarding_screen1.dart';
-import 'onboarding_screen2.dart';
-import 'onboarding_screen3.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -28,33 +25,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.dispose();
   }
 
-  /// Onboarding text data from TextDataModel
-  final List<TextDataEntity> _onboardingScreenTextData =
-      TextDataEntity.screenTextData;
+  /// Onboarding Screens Model
+  final List<OnboardingScreensModel> _screens = OnboardingScreensModel.screens;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          ///
-          PageView(
-            controller: _pageController,
-            clipBehavior: Clip.hardEdge,
-            onPageChanged: (index) => setState(() => _pageIndex = index),
-            children: [
-              // Screens
-              OnboardingScreen1(),
-              OnboardingScreen2(),
-              OnboardingScreen3(),
-            ],
+          Expanded(
+            child: PageView(
+              controller: _pageController,
+              clipBehavior: Clip.hardEdge,
+              onPageChanged: (index) => setState(() => _pageIndex = index),
+              children: _screens.map((model) => model.screen).toList(),
+            ),
           ),
 
           /// Bottom Section
-          BottomSectionWidget(
-            length: _onboardingScreenTextData.length,
-            pageIndex: _pageIndex,
-          ),
+          BottomSectionWidget(length: _screens.length, pageIndex: _pageIndex),
         ],
       ),
     );
