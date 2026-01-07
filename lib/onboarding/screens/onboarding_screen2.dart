@@ -13,15 +13,15 @@ class OnboardingScreen2 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         /// Screen Design
-        Screen2DesignWidget(),
+        Expanded(child: Screen2DesignWidget()),
 
         /// Title
-        TitleWidget(title: OnBoardingText.onBoardingScreen1Title),
+        TitleWidget(title: OnBoardingText.onBoardingScreen2Title),
         SizedBox(height: 10),
 
         /// Description
         DescriptionWidget(
-          description: OnBoardingText.onBoardingScreen1Description,
+          description: OnBoardingText.onBoardingScreen2Description,
         ),
       ],
     );
