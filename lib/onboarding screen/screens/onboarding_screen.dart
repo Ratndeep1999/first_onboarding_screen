@@ -42,11 +42,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             controller: _pageController,
             clipBehavior: Clip.hardEdge,
             children: [
-              // First Page
+              // Screens
               OnboardingScreen1(),
-              // Second Page
               OnboardingScreen2(),
-              // Third Page
               OnboardingScreen3(),
             ],
           ),
