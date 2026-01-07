@@ -41,6 +41,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           PageView(
             controller: _pageController,
             clipBehavior: Clip.hardEdge,
+            onPageChanged: (index) => setState(() => _pageIndex = index),
             children: [
               // Screens
               OnboardingScreen1(),
