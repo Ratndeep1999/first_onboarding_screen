@@ -7,7 +7,7 @@ class TextDataEntity {
   const TextDataEntity({required this.title, required this.description});
 
   /// List return objects of OnboardingScreenModel data
-  static const List<TextDataEntity> screenData = [
+  static const List<TextDataEntity> screenTextData = [
     TextDataEntity(
       title: OnBoardingText.onBoardingScreen1Title,
       description: OnBoardingText.onBoardingScreen1Description,
