@@ -16,12 +16,12 @@ class OnboardingScreen3 extends StatelessWidget {
         Expanded(child: Screen3DesignWidget()),
 
         /// Title
-        TitleWidget(title: OnBoardingText.onBoardingScreen1Title),
+        TitleWidget(title: OnBoardingText.onBoardingScreen3Title),
         SizedBox(height: 10),
 
         /// Description
         DescriptionWidget(
-          description: OnBoardingText.onBoardingScreen1Description,
+          description: OnBoardingText.onBoardingScreen3Description,
         ),
       ],
     );
