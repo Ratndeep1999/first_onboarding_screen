@@ -14,15 +14,15 @@ class Screen2DesignWidget extends StatelessWidget {
 
         /// Center Image
         Positioned(
-          top: 80,
-          left: 100,
-          child: Image.asset(OnBoardingImages.onBoardingCenterImage1),
+          top: 60,
+          left: 80,
+          child: Image.asset(OnBoardingImages.onBoardingCenterImage2),
         ),
 
         /// Top Left Image
         Positioned(
-          top: 90,
-          child: Image.asset(OnBoardingImages.onBoardingTopLeftImage1),
+          top: 100,
+          child: Image.asset(OnBoardingImages.onBoardingTopLeftImage2),
         ),
 
         /// Bottom Left Image
@@ -35,7 +35,7 @@ class Screen2DesignWidget extends StatelessWidget {
         Positioned(
           top: 400,
           right: 0,
-          child: Image.asset(OnBoardingImages.onBoardingBottomRightImage1),
+          child: Image.asset(OnBoardingImages.onBoardingBottomRightImage2),
         ),
       ],
     );
