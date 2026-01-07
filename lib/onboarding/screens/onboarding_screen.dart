@@ -43,7 +43,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
 
           /// Bottom Section
-          BottomSectionWidget(length: _screens.length, pageIndex: _pageIndex),
+          BottomSectionWidget(
+            length: _screens.length,
+            pageIndex: _pageIndex,
+            pageController: _pageController,
+          ),
         ],
       ),
     );
