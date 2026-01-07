@@ -8,7 +8,7 @@ class OnboardingScreensModel {
 
   const OnboardingScreensModel({required this.screen});
 
-  static const List<OnboardingScreensModel> onboardingScreens = [
+  static const List<OnboardingScreensModel> screens = [
     OnboardingScreensModel(screen: OnboardingScreen1()),
     OnboardingScreensModel(screen: OnboardingScreen2()),
     OnboardingScreensModel(screen: OnboardingScreen3()),
