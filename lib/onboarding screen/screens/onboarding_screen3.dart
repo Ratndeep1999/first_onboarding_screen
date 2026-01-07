@@ -4,8 +4,8 @@ import '../widgets/description_widget.dart';
 import '../widgets/title_widget.dart';
 import 'screen designes/screen3_image_design.dart';
 
-class OnboardingScreen1 extends StatelessWidget {
-  const OnboardingScreen1({super.key});
+class OnboardingScreen3 extends StatelessWidget {
+  const OnboardingScreen3({super.key});
 
   @override
   Widget build(BuildContext context) {
