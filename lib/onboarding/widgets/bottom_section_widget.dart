@@ -7,8 +7,10 @@ class BottomSectionWidget extends StatelessWidget {
     super.key,
     required this.pageIndex,
     required this.length,
+    required this.pageController,
   });
 
+  final PageController pageController;
   final int pageIndex;
   final int length;
 
@@ -21,7 +23,7 @@ class BottomSectionWidget extends StatelessWidget {
         children: [
           /// Previous Button
           IconButtonWidget(
-            onTap: () {},
+            onTap: _previousScreen,
             isPrevious: true,
             semanticLabel: 'Previous Page',
           ),
@@ -35,9 +37,25 @@ class BottomSectionWidget extends StatelessWidget {
           ),
 
           /// Next Button
-          IconButtonWidget(onTap: () {}, semanticLabel: 'Next Page'),
+          IconButtonWidget(onTap: _nextScreen, semanticLabel: 'Next Page'),
         ],
       ),
+    );
+  }
+
+  /// Previous Screen Method
+  void _previousScreen() {
+    pageController.previousPage(
+      duration: Duration(seconds: 1),
+      curve: Curves.bounceOut,
+    );
+  }
+
+  /// Next Screen Method
+  void _nextScreen() {
+    pageController.nextPage(
+      duration: Duration(seconds: 1),
+      curve: Curves.bounceOut,
     );
   }
 }
