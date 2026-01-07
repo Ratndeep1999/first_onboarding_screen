@@ -1,6 +1,6 @@
-import 'package:first_onboarding_screen/OnBoarding%20Screen/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'OnBoarding Screen/onboarding_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      title: 'First onboarding screen Design',
+      title: 'First onboarding Design',
       home: OnboardingScreen(),
     );
   }
