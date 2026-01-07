@@ -13,7 +13,7 @@ class OnboardingScreen3 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         /// Screen Design
-        Screen3DesignWidget(),
+        Expanded(child: Screen3DesignWidget()),
 
         /// Title
         TitleWidget(title: OnBoardingText.onBoardingScreen1Title),
