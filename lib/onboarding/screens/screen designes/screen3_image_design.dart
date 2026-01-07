@@ -14,28 +14,29 @@ class Screen3DesignWidget extends StatelessWidget {
 
         /// Center Image
         Positioned(
-          top: 80,
-          left: 100,
-          child: Image.asset(OnBoardingImages.onBoardingCenterImage1),
+          top: 70,
+          left: 120,
+          child: Image.asset(OnBoardingImages.onBoardingCenterImage3),
         ),
 
         /// Top Left Image
         Positioned(
-          top: 90,
-          child: Image.asset(OnBoardingImages.onBoardingTopLeftImage1),
+          left: 30,
+          top: 110,
+          child: Image.asset(OnBoardingImages.onBoardingTopLeftImage3),
         ),
 
         /// Bottom Left Image
         Positioned(
-          top: 300,
-          child: Image.asset(OnBoardingImages.onBoardingBottomLeftImage1),
+          top: 420,
+          child: Image.asset(OnBoardingImages.onBoardingBottomLeftImage3),
         ),
 
         /// Bottom Right Image
         Positioned(
-          top: 400,
-          right: 0,
-          child: Image.asset(OnBoardingImages.onBoardingBottomRightImage1),
+          top: 395,
+          right: 30,
+          child: Image.asset(OnBoardingImages.onBoardingBottomRightImage3),
         ),
       ],
     );
