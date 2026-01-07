@@ -2,8 +2,8 @@ import 'package:first_onboarding_screen/utils/constants/images.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/background_design_widget.dart';
 
-class Screen1DesignWidget extends StatelessWidget {
-  const Screen1DesignWidget({super.key});
+class Screen3DesignWidget extends StatelessWidget {
+  const Screen3DesignWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

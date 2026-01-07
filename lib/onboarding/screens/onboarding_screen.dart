@@ -1,7 +1,7 @@
-import 'package:first_onboarding_screen/onboarding%20screen/screens/onboarding_screen1.dart';
 import 'package:flutter/material.dart';
 import '../model/text_data_entity.dart';
 import '../widgets/bottom_section_widget.dart';
+import 'onboarding_screen1.dart';
 import 'onboarding_screen2.dart';
 import 'onboarding_screen3.dart';
 
