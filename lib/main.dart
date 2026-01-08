@@ -1,9 +1,13 @@
+import 'package:first_onboarding_screen/shared%20pref%20service/onboarding_prefs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'onboarding/screens/onboarding_screen.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  /// get bool value from isOnboarding method
+  final bool isOnboarding = await OnboardingPrefs.isOnboarding;
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
@@ -13,11 +17,13 @@ void main() {
     ),
   );
 
-  runApp(const MyApp());
+  runApp(MyApp(seen: isOnboarding));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, required this.seen});
+
+  final bool seen;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       title: 'First onboarding Design',
-      home: OnboardingScreen(),
+      home: seen ? HomeScreen() : OnboardingScreen(),
     );
   }
 }
