@@ -47,6 +47,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             length: _screens.length,
             pageIndex: _pageIndex,
             pageController: _pageController,
+            isLastScreen: (_pageIndex == (_screens.length - 1)),
           ),
         ],
       ),
