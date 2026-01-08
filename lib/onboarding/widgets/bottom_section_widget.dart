@@ -1,3 +1,5 @@
+import 'package:first_onboarding_screen/home_screen.dart';
+import 'package:first_onboarding_screen/shared%20pref%20service/onboarding_prefs.dart';
 import 'package:flutter/material.dart';
 import 'dot_indicator_widget.dart';
 import 'icon_button_widget.dart';
@@ -8,8 +10,10 @@ class BottomSectionWidget extends StatelessWidget {
     required this.pageIndex,
     required this.length,
     required this.pageController,
+    required this.isLastPage,
   });
 
+  final bool isLastPage;
   final PageController pageController;
   final int pageIndex;
   final int length;
@@ -37,7 +41,7 @@ class BottomSectionWidget extends StatelessWidget {
           ),
 
           /// Next Button
-          IconButtonWidget(onTap: _nextScreen, semanticLabel: 'Next Page'),
+          IconButtonWidget(onTap: _navigation, semanticLabel: 'Next Page'),
         ],
       ),
     );
@@ -56,6 +60,20 @@ class BottomSectionWidget extends StatelessWidget {
     pageController.nextPage(
       duration: Duration(seconds: 1),
       curve: Curves.bounceOut,
+    );
+  }
+
+  /// Navigation Method
+  void _navigation() {
+    isLastScreen ? _navigateHomeScreen() : _nextScreen();
+  }
+
+  /// Home Screen Navigation Method
+  void _navigateHomeScreen() {
+    OnboardingPrefs.setOnboarding();
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => HomeScreen()),
     );
   }
 }
