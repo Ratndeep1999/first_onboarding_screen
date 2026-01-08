@@ -41,7 +41,10 @@ class BottomSectionWidget extends StatelessWidget {
           ),
 
           /// Next Button
-          IconButtonWidget(onTap: _navigation, semanticLabel: 'Next Page'),
+          IconButtonWidget(
+            onTap: () => isLastScreen ? _homeScreen(context) : _nextScreen(),
+            semanticLabel: 'Next Page',
+          ),
         ],
       ),
     );
@@ -63,13 +66,8 @@ class BottomSectionWidget extends StatelessWidget {
     );
   }
 
-  /// Navigation Method
-  void _navigation() {
-    isLastScreen ? _navigateHomeScreen() : _nextScreen();
-  }
-
   /// Home Screen Navigation Method
-  void _navigateHomeScreen() {
+  _homeScreen(BuildContext context) {
     OnboardingPrefs.setOnboarding();
     Navigator.pushReplacement(
       context,
