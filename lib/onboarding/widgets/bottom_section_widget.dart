@@ -10,10 +10,10 @@ class BottomSectionWidget extends StatelessWidget {
     required this.pageIndex,
     required this.length,
     required this.pageController,
-    required this.isLastPage,
+    required this.isLastScreen,
   });
 
-  final bool isLastPage;
+  final bool isLastScreen;
   final PageController pageController;
   final int pageIndex;
   final int length;
